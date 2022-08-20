@@ -1,0 +1,48 @@
+@import './mixin.scss';
+.templateModal{
+    @include modal(261px, 600px);
+    border-radius: 11px;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 20px 28px;
+    color: #FFFFFF;
+    .title{
+        font-size: 13px;
+        text-decoration: underline;
+    }
+    .content{
+        .templateGrid{
+            display: grid;
+            grid-template-columns: repeat(3, 64px);
+            grid-template-rows: 132px;
+            gap: 32px 32px;
+            .templateImageBox{
+                .templateImage{
+                    object-fit: contain;
+                    height: 132px;
+                }
+            }
+        }
+        .buttonBox{
+            position: absolute;
+            right: 13px;
+            bottom: 16px;
+            .confirmButton{
+                height: 30px;
+                width: 70px;
+                border-radius: 7px;
+                text-align: center;
+                line-height: 32px;
+                background-color: #9e8eeb;
+                border: 1px solid #FFFFFF;
+                color: #FFFFFF;
+            }
+        }
+    }
+    .modalExitImage{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 12.5px;
+        right: 12.5px;
+    }
+}

@@ -1,0 +1,69 @@
+@import './mixin.scss';
+
+@mixin otherButton($bottom){
+    bottom: -8vh;
+    opacity: 0;
+    &.selected{
+        bottom: $bottom;
+        opacity: 1;
+    }
+}
+
+.buttonList{
+    position: absolute;
+    bottom: 11vh;
+    right: 11vh;
+    z-index: 10;
+    &>div{
+        width: 8vh;
+        height: 8vh;
+        border: solid 2px #9e8eeb;
+        border-radius: 50%;
+        display: grid;
+        text-align: center;
+        justify-items: center;
+        position: absolute;
+        background-color: #FFFFFF;
+        line-height: 8vh;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        transition: all 1s;
+        &>img{
+            display: block;
+            margin: auto;
+            width: 3.5vh;
+            height: 3.5vh;
+            object-fit: contain;
+        }
+    }
+    .addButton{
+        @include otherButton(28vh);
+    }
+    .templateButton{
+        @include otherButton(19vh);
+    }
+    .rectButton, .createButton{
+        @include otherButton(10vh);
+    }
+    .downloadButton, .configButton{
+        @include otherButton(1vh); 
+    }
+    .plusButton{
+        background-color: #9e8eeb;
+        color: #FFFFFF;
+        display: grid;
+        align-items: center;
+        &.selected{
+            background-color: #FFFFFF;
+            color: #9e8eeb;
+            &>span{
+                transform: rotate(45deg);
+            }
+        }
+        &>span{
+            transform: rotate(0);
+            font-size: 6vh;
+            transition: transform 1s;
+        }
+    }
+}
+

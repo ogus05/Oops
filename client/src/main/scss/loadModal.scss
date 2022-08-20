@@ -1,0 +1,19 @@
+@import './mixin.scss';
+
+.loadModal{
+    @include modal(100%, 844px);
+    background: linear-gradient(to top, #d0c2f4, #FFFFFF, #FFFFFF, #FFFFFF);
+    .logoBox{
+        text-align: center;
+        margin-top: 339px;
+        img{
+            width: 132px;
+            height: 46px;
+        }
+    }
+    .textBox{
+        text-align: center;
+        font-size: 19px;
+        color: #717171;
+    }
+}

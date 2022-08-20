@@ -1,0 +1,30 @@
+.box{
+    &>.oop{
+        animation-name: oop;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        border-radius: 50%;
+        break-inside: avoid;
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.16);
+        .keywordBox{
+            display: grid;
+            justify-content: center;
+            .keywordImage{
+                img{
+                    object-fit: contain,
+                }
+            }
+        }
+        .textBox{
+            white-space: pre-wrap;
+            width: 100%;
+        }
+    }
+
+}

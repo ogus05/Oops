@@ -1,0 +1,227 @@
+@import './mixin.scss';
+
+.myModal{
+    @include modal(317px, 750px);
+    padding: 10px 10px;
+    border-radius: 11px;
+    background-color: rgba(0, 0, 0, 0.45);
+    color: #FFF;
+    overflow-y: scroll !important;
+    &::-webkit-scrollbar{
+        height: 17%;
+        width: 15px !important;
+    }
+    &::-webkit-scrollbar-thumb{
+        margin: 10px !important;
+        border-radius: 20px;
+        background-color: #d8d8d8;
+        background-clip: padding-box;
+        border: 5px solid transparent;
+    }
+
+    .title{
+        font-size: 13px;
+        text-decoration: underline;
+    }
+    .content{
+        opacity: 1;
+        font-size: 13px;
+        overflow-y: auto;
+        overflow: hidden;
+        .topic{
+            margin: auto;
+            margin-top: 27px;
+            &Name{
+                margin-left: 20px;
+                margin-bottom: 5px;
+            }
+            .keyword{
+                display: grid;
+                grid-template-columns: repeat(3, 76px);
+                grid-auto-rows: 23px;
+                gap: 11px 12px;
+                justify-content: center;
+                &Box{
+                    @include keywordBox();
+                }
+            }
+        }
+    }
+    .setting{
+        opacity: 1;
+        margin-left: 20px;
+        .keywordBox{
+            margin-top: 16px;
+            @include keywordBox();
+        }
+        .userInput{
+            width: 90%;
+            height: 23px;
+            opacity: 0.57;
+            border-radius: 8px;
+            margin-top: 14px;
+            padding-left: 11px;
+            font-size: 14px;
+            line-height: 27px;
+            color: #000000;
+            font-weight: 600;
+            border: none;
+            resize: none;
+            overflow: hidden;
+        }
+        &Text{
+            .subTitle{
+                margin-left: 0px;
+            }
+            &>*{
+                font-size: 14px;
+                margin-left: 10px;
+            }
+            &Font{
+                margin-top: 13px;
+                background-color: inherit;
+                width: 140px;
+                color: #FFF;
+                border: none;
+                border-bottom: 1px solid #FFFFFF;
+                & option{
+                    background-color: #d5d1d9;
+                    color: #6b6b6b;
+                    
+                }
+                &Size{
+                    background-color: inherit;
+                    width: 40px;
+                    border: none;
+                    border-bottom: #FFF 1px solid;
+                    color: #FFF;
+                    margin-left: 13px;
+                    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+                    &::placeholder{
+                        color: #FFF;
+                    }
+                }
+                &Color{
+                    @include colorPicker(32px, 15px);
+                    &Box{
+                        margin-top: 13px;
+                    }
+                }
+            }
+        }
+        &Oop{
+            .subTitle{
+                margin-left: 0;
+            }
+            &>*{
+                font-size: 14px;
+                margin-left: 10px;
+            }
+            &Grid{
+                display: grid;
+                grid-template-columns: 40px 90px 40px 90px;
+                margin-top: 13px;
+            }
+            &Color{
+                @include colorPicker(32px, 15px);
+            }
+            &BorderColor{
+                @include colorPicker(32px, 15px);
+
+            }
+            &Size{
+                position: relative;
+                &>div>div{
+                    border-radius: 50%;
+                    background-color: #f0edff;
+                        text-align: center;
+                        font-size: 13px;
+                        overflow: hidden;
+                        border: 1px solid #FFFFFF;
+                }
+                .line1{
+                    margin-left: -10px;
+                    display: grid;
+                    grid-template-columns: 75px 95px 115px;
+                    grid-template-rows: 115px;
+                    align-items: center;
+                }
+                .line2{
+                    position: relative;
+                    margin-left: -15px;
+                    height: 720px;
+                    &>div{
+                        position: absolute;
+                        
+                    }
+                    .size35{
+                        top: 225px;
+                        left: 80px;
+                    }
+                    .size55{
+                        top: 17px;
+                        left: 144px;
+                    }
+                    .size50{
+                        top: 22px;
+                        left: 208px;
+                    }
+                    .size80{
+                        top: 158px;
+                        left: 5px;
+                    }
+                    .size135{
+                    }
+                    .size185{
+                        top: 84px;
+                        left: 107px;
+                    }
+                    .size210{
+                        top: 277px;
+                    }
+                    .size230{
+                        top: 480px;
+                        left: 60px;
+                    }
+                }
+                .line3{
+                    display: grid;
+                    height: 28px;
+                    padding-top: 10px;
+                    grid-template-columns: repeat(2, 70px);
+                    gap: 0px 6px;
+                    float: right;
+                    &>div{
+                        line-height: 28px;
+                        text-align: center;
+                        border-radius: 7px;
+                    }
+                    .deleteButton{
+                        background-color: #FFFFFF;
+                        border: 1px solid #9e8eeb;
+                        color: #9e8eeb;
+                    }
+                    .confirmButton{
+                        background-color: #9e8eeb;
+                        border: 1px solid #FFFFFF;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+            .buttonBox{
+                position: relative;
+                
+            }
+        }
+        }
+    .modalExitImage{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 12.5px;
+        right: 7.5px;
+    }
+}

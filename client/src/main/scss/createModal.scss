@@ -1,0 +1,19 @@
+@import './mixin.scss';
+
+.createModal{
+    @include modal(247px, 54px);
+    top: 80%;
+    text-align: center;
+    line-height: 58px;
+    background-color: #FFFFFF;
+    border-radius: 7px;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16);
+    font-weight: 500;
+    color: #9d8dea;
+    border: 1px solid #9d8dea;
+    &Overlay{
+        width: 0px;
+        height: 0px;
+        top: 80%;
+    }
+}

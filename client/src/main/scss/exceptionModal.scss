@@ -1,0 +1,40 @@
+@import './mixin.scss';
+
+.exceptionModal{
+    @include modal(204px, 163px);
+    border: 1px solid #9d8dea;
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 5px;
+    .content{
+        display: grid;
+        grid-template-rows: 50px 70px auto;
+        .title{
+            border-bottom: 1px solid #9d8dea;
+            color :#7e6cd5;
+            font-size: 18px;
+            line-height: 57px;
+            text-align: center;
+        }
+        .message{
+            color: #7e6cd5;
+            font-size: 16px;
+            line-height: 50px;
+            text-align: center;
+        }
+        .buttonBox{
+            display: grid;
+            grid-template-columns: 70px;
+            justify-content: center;
+            .confirmButton{
+                height: 28px;
+                line-height: 28px;
+                text-align: center;
+                border-radius: 7px;
+                background-color: #9e8eeb;
+                border: 1px solid #FFFFFF;
+                color: #FFFFFF;
+            }
+        }
+    }
+}

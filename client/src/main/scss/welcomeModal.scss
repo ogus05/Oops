@@ -1,0 +1,77 @@
+@import './mixin.scss';
+.welcomeModal{
+    @include modal(390px, 844px);
+    background-color: rgba(0, 0, 0, 0.45);
+    .content{
+        display: grid;
+        justify-content: center;
+        color: #FFFFFF;
+        .title{
+            text-align: center;
+            font-size: 30px;
+            margin-top: 142px;
+        }
+
+        @mixin button(){
+            text-align: center;
+            font-size: 17px;
+            position: relative;
+            .textFilter{
+                position: absolute;
+                top: 0px;
+                left: 50%;
+                width: 100%;
+                transform: translate(-50%, 0);
+                -webkit-filter: blur(1.9px);
+                filter: blur(0.8px);
+                display: none;
+            }
+            &:hover{
+                cursor: pointer;
+                .textFilter{
+                    display: block;
+                }
+            }
+        }
+
+        .progressButton{
+            margin-top: 40px;
+            @include button();
+        }
+        .skipButton{
+            margin-top: 12px;
+            @include button();
+        }
+        .cookieBox{
+            margin-top: 300px;
+            display: grid;
+            grid-template-columns: auto 24px;
+            .text{
+                font-size: 14px;
+                line-height: 25px;
+            }
+            .button{
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+#driver-highlighted-element-stage{
+    border-radius: 50% !important;
+}
+.popover{
+    background-color: inherit !important;
+    color: #FFFFFF !important;
+    box-shadow: none !important;
+    .driver-popover-title{
+        float: right;
+        font-family: 'SeoulNamsanM' !important;
+        font-size: 20px;
+        font-weight: 500 !important;
+        text-shadow: none !important;
+    }
+    .driver-popover-tip{
+        display: none;
+    }
+}

@@ -1,0 +1,95 @@
+@font-face{
+    font-family: 'SeoulNamsanM';
+    src: url('../../public/font/SeoulNamsanM.ttf');
+}
+*{
+    font-family: 'SeoulNamsanM';
+    overflow: hidden;
+}
+
+bodY{
+    margin: 0;
+}
+article {
+    margin: auto;
+    background: linear-gradient(to top, #d0c2f4, #FFFFFF, #FFFFFF, #FFFFFF);
+    height: 844px;
+    width: 390px;
+    text-align: center;
+    .textBox{
+        margin-top: 10px;
+        .text{
+            font-size: 14px;
+            color: #707070;
+        }
+    }
+    .nameBox{
+        margin-top: 46px;
+        object-fit: contain;
+        font-size: 18px;
+        input[type=text]{
+            outline: none;
+            border: none;
+            border-bottom: 2px solid black;
+            width: 60px;
+            opacity: 0.56;
+            font-size: 18px;
+            text-align: center;
+            padding: 0;
+        }
+    }
+    .nameAlert{
+        margin-top: 5px;
+        height: 12px;
+        text-align: center;
+        color: #ff0000;
+        font-size: 12px;
+    }
+    .enterImageBox{
+        margin-top: 36px;
+        .enterImage{
+            object-fit: contain;
+            width: 37px;
+            height: 37px;
+        }
+    }
+    .tokenAlert{
+        height: 12px;
+        text-align: center;
+        color: #ff0000;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    .tokenBox{
+        display: grid;
+        width: 250px;
+        height: 30px;
+        margin: auto;
+        border: none;
+        font-size: 14px;
+        color: #919191;
+        border-radius: 13px;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        grid-template-columns: auto 28px;
+        grid-template-rows: 30px;
+        line-height: 35px;
+        background-color: white;
+        .inputBox{
+            input[type=text]{
+                width:200px;
+                border: none;
+                outline: none;
+                font-size:14px;
+                opacity: 0.56;
+                text-align: center;
+            }
+        }
+        .passBox{
+            background-color: #a595f0;
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 20px;
+            border-radius: 0 13px 13px 0;
+        }
+    }
+}

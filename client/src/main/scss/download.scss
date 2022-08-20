@@ -1,0 +1,144 @@
+@import './mixin.scss';
+
+#main{
+    .download{
+        width: 100%;
+        height: 844px;
+        margin: auto;
+        background: linear-gradient(to top, #d0c2f4, #FFFFFF, #FFFFFF, #FFFFFF);
+        position: absolute;
+        overflow: hidden;
+        .logoBox{
+            text-align: center;
+            @keyframes logo {
+                from{
+                    margin-top: 339px;
+                }
+                to{
+                    margin-top: 43px;
+                }
+            }
+            animation-name: logo;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            img{
+                @keyframes logoImage {
+                    from{
+                        width: 132px;
+                        height: 46px;
+                    }
+                    to{
+                        width: 91px;
+                        height: 32px;
+                    }
+                }
+                animation-name: logoImage;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+            }
+        }
+        .imageBox{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            margin-top: -50px;
+            img{
+                height: 550px;
+                opacity: 0;
+                @keyframes image {
+                    from{
+                        opacity: 0;
+                    }
+                    to{
+                        opacity: 1;
+                    }
+                }
+                aspect-ratio: 390 / 844;
+                animation-delay: 1s;
+                animation-name: image;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.46);
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+            }
+        }
+        .blank{
+            height: 550px;
+        }
+        .textBox{
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 5px;
+            .text{
+                font-size: 15px;
+                color: #7e6cd5;
+            }
+        }
+        .tokenBox{
+            display: grid;
+            grid-template-columns: auto 35px;
+            margin: auto;
+            color: black;
+            width: 290px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 14px;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+            padding: 5px;
+            line-height: 32px;
+            .token{
+                text-align: center;
+                font-size: 15px;
+                z-index: 999999;
+                padding-left: 35px;
+            }
+            .image{
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                z-index: 999999;
+                img{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+        .buttonBox{
+            display: grid;
+            grid-template-columns: repeat(2, 148px);
+            grid-template-rows: 49px;
+            gap: 8px;
+            justify-content: center;
+            padding-top: 18px;
+            &.onlyDownload{
+                display: grid;
+                grid-template-columns: 148px;
+                grid-template-rows: 49px;
+            }
+            &>div{
+                border-radius: 10px;
+                background-color: #fff;
+                border: 2px solid #9a8be5;
+                display: grid;
+                grid-template-columns: 23px auto;
+                gap: 6px;
+                justify-content: center;
+                align-items: center;
+                z-index: 10;
+                box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+                .image{
+                    img{
+                        width: 23px;
+                        height: 23px;
+                        object-fit: contain;
+                    }
+                }
+                .text{
+                    color: #7e6cd5;
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
