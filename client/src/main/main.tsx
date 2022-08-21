@@ -125,9 +125,11 @@ const Main = () => {
                     return <Oop config={v}  key={i} setMyModalOpen={()=> {
                         setMyModal({isOpen: true, selectedOop: i})
                     }}
-                    setConfig={oop => setOops(oops.map((innerV, innerI) => 
-                        i === innerI ? oop : innerV
-                    ))} 
+                    setConfig={oop => {
+                        const tempOops = oops;
+                        tempOops.splice(i, 1);
+                        setOops(tempOops.concat(oop));
+                    }} 
                     keywordText={keyword.find(innerV => v.keywordID === innerV.ID)?.text}
                     configMode={configMode} fontList={fontList} setFontList={setFontList}
                     zoom={zoom}/>})
